@@ -1,19 +1,18 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import type { RootState } from '../../store'
 import { userInitialState } from './type'
-import { DataArray, DataCommits } from '../../../types'
-
 
 // Define the initial state using that type
 const initialState: userInitialState = {
-  commits:<DataCommits[]>[]
+  commits:[]
 }
 
 export const userSlice = createSlice({
-  name: 'user',
+  name: 'users',
   initialState,
   reducers: {
-    setCommits: (state, action: PayloadAction<DataCommits[]>) => {
+    setCommits: (state, action: PayloadAction<any>) => {
+      console.log("LLEGO PAYLOAD", action.payload)
       state.commits = action.payload
     },
   },

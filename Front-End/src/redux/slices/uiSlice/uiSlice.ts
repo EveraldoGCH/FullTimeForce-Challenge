@@ -4,7 +4,8 @@ import { initialUiState } from './type'
 
 // Define the initial state using that type
 const initialState: initialUiState = {
-  dark:false
+  dark: false,
+  loading: true
 }
 
 export const uiSlice = createSlice({
@@ -15,9 +16,12 @@ export const uiSlice = createSlice({
       state.dark = false
     },
     setDarkTheme: (state) => {
-        state.dark = true
-      },
+      state.dark = true
+    },
+    finishLoadingUi: (state) => {
+      state.loading = false
+    },
   },
 })
 
-export const { setLightTheme, setDarkTheme } = uiSlice.actions
+export const { setLightTheme, setDarkTheme, finishLoadingUi } = uiSlice.actions

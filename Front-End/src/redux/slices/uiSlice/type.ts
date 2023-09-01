@@ -1,3 +1,4 @@
 export interface initialUiState{
-    dark:boolean
+    dark:boolean;
+    loading:boolean;
 }
