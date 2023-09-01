@@ -11,7 +11,7 @@ const Header: React.FC = () => {
 
     return (
         <header className="w-full h-[80px] flex items-center justify-around bg-white">
-            <Link to={githubUrl} target="_blank" className="w-[10%] flex-wrap content-center justify-center">
+            <Link to={githubUrl} target="_blank" className="w-[10%] flex-wrap content-center justify-center ">
                 <img src={github} alt="GitHub logo" className="w-full max-w-[57px]" />
             </Link>
             <Link to={challengeUrl} className="w-[10%] decoration-black font-sans font-semibold text-base text-center" target="_blank">Challenge</Link>
