@@ -3,11 +3,11 @@ import { useFetchData } from "../../hooks/useFetchData"
 
 
 const StartScreen = () => {
-    const data = useFetchData("http://localhost:5000/github/commits?owner=everaldogch&repo=fulltimeforce-challenge")
+    useFetchData()
 
     return (
         <Layout>
-            {data?
+            {true?
             <></>
             :
             <p>Cargando feo</p>}

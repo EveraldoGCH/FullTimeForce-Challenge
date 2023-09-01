@@ -1,16 +1,13 @@
 import { useState, useEffect } from "react"
+import { useAppDispatch } from "./useRedux"
+import { getCommitsAsync } from "../redux/slices/userSlice/thunk"
 
-export const useFetchData = (url: string) => {
-    const [data, setData] = useState<any[]>()
-    
+
+export const useFetchData = () => {
+const dispatch=useAppDispatch()
     useEffect(()=>{
-        fetch(url)
-        .then(response => response.json())
-        .then(json => setData(json))
-        .catch(error => console.error(error));
-    },[url])
-
-        return data
+        dispatch(getCommitsAsync())
+    },[])
 }
 
 
