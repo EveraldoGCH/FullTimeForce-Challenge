@@ -7,7 +7,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Header />
-      <div className="p-[2%]">
+      <div className="p-[2%] flex items-center justify-center">
         {children}
       </div>
     </>

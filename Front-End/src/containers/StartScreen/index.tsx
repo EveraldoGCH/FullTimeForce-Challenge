@@ -1,4 +1,5 @@
 import { Layout } from "../../components";
+import DarkSwitch from "../../components/DarkSwitch";
 import { useFetchData } from "../../hooks/useFetchData"
 
 
@@ -7,6 +8,7 @@ const StartScreen = () => {
 
     return (
         <Layout>
+            <DarkSwitch/>
             {true?
             <></>
             :
