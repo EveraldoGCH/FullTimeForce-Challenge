@@ -5,6 +5,9 @@
   "scripts": {
     "front":"cd Front-end && npm start",
     "back":"cd Back-end && npm run start",
+    "enter:back":"cd Back-end && npm i",
+    "enter:front":"cd Front-end && npm i",
+    "depend":"concurrently \"npm run enter:back\" \"npm run enter:front\"",
     "start": "concurrently \"npm run back\" \"npm run front\"",
     "build": "react-scripts build"
     
